@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab id="PsSyncTab" label="SharePoint">
+        <group id="PsSyncGroup" label="SharePoint Lists">
+          <button id="PsSyncNow"
+                  label="Sync now"
+                  size="large"
+                  imageMso="Refresh"
+                  screentip="Synchronize the active project to SharePoint"
+                  supertip="Uploads tasks, resources and assignments of the active project to the configured SharePoint Online lists."
+                  onAction="OnSyncNow" />
+          <toggleButton id="PsSyncOnSave"
+                        label="Sync on save"
+                        size="large"
+                        imageMso="FileSave"
+                        screentip="Synchronize automatically when the project is saved"
+                        getPressed="GetSyncOnSavePressed"
+                        onAction="OnToggleSyncOnSave" />
+          <separator id="PsSep1" />
+          <button id="PsOpenSite"
+                  label="Open site"
+                  imageMso="WebPagePreview"
+                  screentip="Open the SharePoint site in the browser"
+                  onAction="OnOpenSite" />
+          <button id="PsSettings"
+                  label="Settings"
+                  imageMso="PropertySheet"
+                  screentip="SharePoint connection and synchronization settings"
+                  onAction="OnSettings" />
+          <button id="PsOpenLog"
+                  label="Log"
+                  imageMso="FileDocumentInspect"
+                  screentip="Open the folder with synchronization logs"
+                  onAction="OnOpenLog" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
